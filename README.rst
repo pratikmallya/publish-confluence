@@ -16,18 +16,32 @@ See the `action.yaml`_ file for details of required inputs.
 Prerequisites
 -------------
 
-* Github repo is setup with `confluencebuilder`_ to publish to confluence on 
-  ``make confluence`` when run locally 
+* Github repo is setup with `confluencebuilder`_ options to publish to 
+  confluence on ``make confluence`` when run locally 
 
 
 Example usage
 -------------
 
+The following is a fully function `Github Workflow`_. Note that 
+``atlassianUsername``  and ``atlassianApitoken`` are `Github secrets`_ that need 
+to be added to the Github repo.
+
 .. code:: yaml
 
-  uses: actions/publish-confluence@v1
-  with:
-    username: ${{ secrets.atlassianUsername }}
-    apitoken: ${{ secrets.atlassianApitoken }}
+  on: [push]
+  jobs:
+    publish_confluence:
+      runs-on: ubuntu-latest
+      name: Publish docs to confluence
+      steps:
+      - uses: actions/checkout@v1
+      - name: publish to confluence
+        uses: pratikmallya/publish-confluence@master
+        with:
+          username: ${{ secrets.atlassianUsername }}
+          apitoken: ${{ secrets.atlassianApitoken }}
 
 .. _confluencebuilder: https://github.com/sphinx-contrib/confluencebuilder
+.. _Github secrets: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets
+.. _Github Workflow: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/configuring-a-workflow
