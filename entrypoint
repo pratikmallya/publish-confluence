@@ -2,4 +2,8 @@
 
 pwd
 ls -lah
+ls -lah /github/home
+ls -lah /github/workflow
+ls -lah /
+ls -lah /github/workspace
 make confluence
