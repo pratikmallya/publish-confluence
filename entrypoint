@@ -1,4 +1,4 @@
 #!/bin/sh -l
 
 make confluence \
-  SPHINXOPTS="-D confluence_server_user=$INPUT_ATLASSIAN-USERNAME -D confluence_server_pass=$INPUT_ATLASSIAN-APITOKEN"
+  SPHINXOPTS="-D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN"

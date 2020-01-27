@@ -2,15 +2,12 @@
 name: 'publish-confluence'
 description: 'Publish sphinx docs to atlassian confluence cloud'
 inputs:
-  atlassian-username:
+  username:
     description: 'email of user used to access confluence'
     required: true
-  atlassian-apitoken:
+  apitoken:
     description: 'apitoken to auth with confluence. Obtain one from https://id.atlassian.com/manage/api-tokens'
     required: true 
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.atlassian-username }}
-    - ${{ inputs.atlassian-apitoken }}
