@@ -8,4 +8,4 @@ RUN pip install sphinxcontrib-confluencebuilder
 
 COPY . .
 
-ENTRYPOINT ["/entrypoint"]
+ENTRYPOINT ["/publish-confluence/entrypoint"]
