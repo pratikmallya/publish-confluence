@@ -1,6 +1,5 @@
 #!/bin/sh -l
 
-cd $GITHUB_WORKSPACE
 pwd
 ls -lah
 make confluence
