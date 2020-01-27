@@ -1,5 +1,6 @@
 FROM dldl/sphinx-server:latest
 
 RUN pip install sphinxcontrib-confluencebuilder
+COPY . .
 
-CMD ["make", "confluence"]
+ENTRYPOINT ["/entrypoint"]
