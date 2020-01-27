@@ -4,6 +4,4 @@ USER root
 
 RUN pip install sphinxcontrib-confluencebuilder
 
-COPY entrypoint entrypoint
-
-ENTRYPOINT ["/entrypoint"]
+CMD ["make", "confluence"]

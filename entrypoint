@@ -1,7 +1,0 @@
-#!/bin/sh -l
-
-cd $GITHUB_WORKSPACE
-ls -lah 
-ls -lah /github
-ls -lah $GITHUB_WORKSPACE
-make confluence
