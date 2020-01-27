@@ -1,9 +1,7 @@
 #!/bin/sh -l
 
-pwd
-ls -lah
-ls -lah /github/home
-ls -lah /github/workflow
-ls -lah /
-ls -lah /github/workspace
+cd $GITHUB_WORKSPACE
+ls -lah 
+ls -lah /github
+ls -lah $GITHUB_WORKSPACE
 make confluence
