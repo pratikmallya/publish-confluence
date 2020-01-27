@@ -25,8 +25,9 @@ Example usage
 
 .. code:: yaml
 
-  uses: actions/hello-world-docker-action@v1
+  uses: actions/publish-confluence@v1
   with:
-    who-to-greet: 'Mona the Octocat'
+    atlassian-username: ${{ secrets.atlassianUsername }}
+    atlassian-apitoken: ${{ secrets.atlassianApitoken }}
 
 .. _confluencebuilder: https://github.com/sphinx-contrib/confluencebuilder
