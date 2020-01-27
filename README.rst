@@ -27,7 +27,7 @@ Example usage
 
   uses: actions/publish-confluence@v1
   with:
-    atlassian-username: ${{ secrets.atlassianUsername }}
-    atlassian-apitoken: ${{ secrets.atlassianApitoken }}
+    username: ${{ secrets.atlassianUsername }}
+    apitoken: ${{ secrets.atlassianApitoken }}
 
 .. _confluencebuilder: https://github.com/sphinx-contrib/confluencebuilder
