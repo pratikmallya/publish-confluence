@@ -1,7 +1,6 @@
-FROM python:3.5-alpine3.10
+FROM python:3.5
 
 RUN pip install sphinxcontrib-confluencebuilder
-RUN apk add --update alpine-sdk
 
 COPY . .
 
