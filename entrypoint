@@ -1,3 +1,5 @@
 #!/bin/sh -l
 
-make confluence
+make confluence \
+  -D confluence_server_user=$INPUT_ATLASSIAN-USERNAME \
+  -D confluence_server_pass=$INPUT_ATLASSIAN-APITOKEN  
