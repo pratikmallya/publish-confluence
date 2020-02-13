@@ -36,6 +36,9 @@ to be added to the Github repo.
       name: Publish docs to confluence
       steps:
       - uses: actions/checkout@v1
+      - uses: actions/setup-python@v1  # Only required if you have multiple python deps
+        with:
+          python-version: '3.x'
       - name: publish to confluence
         uses: pratikmallya/publish-confluence@master
         with:
