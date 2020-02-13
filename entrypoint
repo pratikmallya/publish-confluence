@@ -1,5 +1,10 @@
 #!/bin/sh -l
 
+# install requirements.txt if it exists
+if [ -f requirements.txt ]; then
+  pip install --user -r requirements.txt
+fi
+
 if ! [ -z "$INPUT_DOCSDIR" ]; then
   cd $INPUT_DOCSDIR
 fi
