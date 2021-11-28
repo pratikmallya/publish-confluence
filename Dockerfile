@@ -5,7 +5,8 @@ USER root
 RUN pip install \
   Sphinx==2.4.4 \
   sphinxcontrib-confluencebuilder \
-  recommonmark
+  recommonmark \
+  m2r2
 
 COPY entrypoint entrypoint
 
