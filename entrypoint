@@ -4,5 +4,7 @@ if ! [ -z "$INPUT_DOCSDIR" ]; then
   cd $INPUT_DOCSDIR
 fi
 
+echo "$INPUT_USERNAME $INPUT_APITOKEN"
+
 make confluence \
   SPHINXOPTS="-D confluence_server_user=$INPUT_USERNAME -D confluence_server_pass=$INPUT_APITOKEN"
