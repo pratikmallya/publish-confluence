@@ -44,7 +44,7 @@ to be added to the Github repo.
         with:
           username: ${{ secrets.atlassianUsername }}
           apitoken: ${{ secrets.atlassianApitoken }}
-          requirements_file: ${{ secrets.atlassianApitoken }}
+          requirementsfile: custom_requirements.txt
 
 .. _confluencebuilder: https://github.com/sphinx-contrib/confluencebuilder
 .. _Github secrets: https://help.github.com/en/actions/automating-your-workflow-with-github-actions/creating-and-using-encrypted-secrets
