@@ -11,7 +11,7 @@ inputs:
   docsdir:
     description: 'directory in the repo where the docs are located'
     default: ''
-  requirementfile:
+  requirementsfile:
     description: 'file at base of the directory if it not requirements.txt'
     default: ''
 runs:
