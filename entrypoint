@@ -1,8 +1,8 @@
 #!/bin/sh -l
 
 # install requirements.txt if it exists
-if [  -z "$INPUT_REQUIREMENTS_FILE" ]; then
-  pip install --user -r $INPUT_REQUIREMENTS_FILE
+if [  -z "$INPUT_REQUIREMENTSFILE" ]; then
+  pip install --user -r $INPUT_REQUIREMENTSFILE
 elif [ -f requirements.txt ]; then
   pip install --user -r requirements.txt
 fi
